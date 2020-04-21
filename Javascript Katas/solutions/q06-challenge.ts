@@ -15,7 +15,7 @@ export const findPairsWhichSum = (
     );
 
     if (indexOfLookUpNumber !== -1 && indexOfLookUpNumber !== number) {
-      arrayOfPairs.push([lookupValueForSum, number]);
+      arrayOfPairs.unshift([lookupValueForSum, number]);
       arrayOfNumbersClone.splice(indexOfLookUpNumber, 1);
       arrayOfNumbersClone.splice(lookupValueForSum, 1);
     }
